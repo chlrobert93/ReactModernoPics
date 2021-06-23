@@ -1,9 +1,10 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
 //Compontente funcional
 
 const App = () =>{
-    return <div>App</div>
+    return <div><SearchBar /></div>
 };
 
 
