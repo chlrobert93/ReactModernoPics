@@ -6,14 +6,16 @@ import React from 'react';
 //Coponente basado en clase
 //Para utilisar state
 class SearchBar extends React.Component {
-
+/*
 //Definir un nuevo método
    onInputChange(event){
        //Esto contendra el texto que el usuario acaba de agregar a nuestra entrada
       console.log(event.target.value);
 
-   }
+   }*/
 
+   //Objec State
+    state = { term: ''};
 
 
     render(){
@@ -23,8 +25,8 @@ class SearchBar extends React.Component {
             <form className="ui form">
                 <div className="field">
                   <label>Image Search</label>
-                  <input type="text"  onChange={e => console.log(e.target.value)}/>
-               </div>
+                  <input type="text" value={this.state.term} onChange={(e) => this.setState({ term: e.target.value})} /*onChange={this.onInputChange}*//>
+               </div> 
             </form>
         </div>
     );
