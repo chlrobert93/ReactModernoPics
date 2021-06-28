@@ -18,9 +18,9 @@ class SearchBar extends React.Component {
     state = { term: ''};
      
     onFormSubmit(event){
-        //Intente enviar el formulario automáticamentey en el proceso actualizen la página
+        //Intent e enviar el formulario automáticamentey en el proceso actualizen la página
         event.preventDefault();
-            console.log(this.state.term);
+           // console.log(this.state.term);
 
     }
 
@@ -36,7 +36,7 @@ class SearchBar extends React.Component {
             <form onSubmit={this.onFormSubmit} className="ui form">
                 <div className="field">
                   <label>Image Search</label>      
-                  <input type="text" value={this.state.term} onChange={(e) => this.setState({ term: e.target.value.toUpperCase()})} /*onChange={this.onInputChange}*//>
+                  <input type="text" value={this.state.term} onChange={(e) => this.setState({ term: e.target.value.toUpperCase()})} /*onClick={this.onInputClick} onChange={this.onInputChange}*//>
                </div> 
             </form>
         </div>
