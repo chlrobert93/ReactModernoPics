@@ -17,10 +17,10 @@ class SearchBar extends React.Component {
    //Objec State
     state = { term: ''};
      
-    onFormSubmit(event){
+    onFormSubmit = (event) => {
         //Intent e enviar el formulario automáticamentey en el proceso actualizen la página
         event.preventDefault();
-           // console.log(this.state.term);
+             console.log(this.state.term);
 
     }
 
