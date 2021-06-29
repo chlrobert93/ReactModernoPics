@@ -15,6 +15,10 @@ class App extends React.Component{
  
             }
 
+        })
+        //Se invocara información que reciba de la API
+        .then(response =>{
+            console.log(response.data.results);
         });
     }
     render(){
