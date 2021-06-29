@@ -6,20 +6,17 @@ import SearchBar from './SearchBar';
 //Compontente funcional
 
 class App extends React.Component{
-    onSearchSubmit(term){
+    async onSearchSubmit(term){
         //console.log(term);
-        axios.get('https://api.unsplash.com/search/photos',{
+       const response = await axios.get('https://api.unsplash.com/search/photos',{
             params: { query: term},
             headers:{
                 Authorization: 'Client-ID 5oqc8HyEuFhq638lSaWw2hQte46HHdWER-3oe9F4cLs',
  
             }
-
-        })
-        //Se invocara información que reciba de la API
-        .then(response =>{
-            console.log(response.data.results);
         });
+
+        console.log(response.data.results);
     }
     render(){
 
