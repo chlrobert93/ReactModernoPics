@@ -20,7 +20,8 @@ class SearchBar extends React.Component {
     onFormSubmit = (event) => {
         //Intent e enviar el formulario automáticamentey en el proceso actualizen la página
         event.preventDefault();
-             console.log(this.state.term);
+            // console.log(this.state.term);
+            this.props.onSubmit(this.state.term); 
 
     }
 
