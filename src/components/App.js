@@ -6,6 +6,7 @@ import SearchBar from './SearchBar';
 //Compontente funcional
 
 class App extends React.Component{
+    state = {images: []};
     async onSearchSubmit(term){
         //console.log(term);
        const response = await axios.get('https://api.unsplash.com/search/photos',{
@@ -16,6 +17,8 @@ class App extends React.Component{
             }
         });
 
+        console.log(this);
+        this.setState({images: response.data.results});
         console.log(response.data.results);
     }
     render(){
@@ -23,6 +26,7 @@ class App extends React.Component{
     return( 
        <div className="ui container" style={{marginTop: '10px'}}>
            <SearchBar  onSubmit={this.onSearchSubmit}/>
+           Found: {this.state.images.length} images
         </div>);
     }
 }
