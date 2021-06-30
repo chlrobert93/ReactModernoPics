@@ -2,7 +2,7 @@ import React from 'react';
 //import axios from 'axios';  
 import unsplash from '../api/unsplash';
 import SearchBar from './SearchBar';
-
+import ImageList from './ImageList';
 
 //Compontente funcional
 
@@ -29,8 +29,8 @@ class App extends React.Component{
     return( 
        <div className="ui container" style={{marginTop: '10px'}}>
            <SearchBar  onSubmit={this.onSearchSubmit}/>
-           Found: {this.state.images.length} images
-        </div>);
+            <ImageList images={this.state.images} />
+         </div>);
     }
 }
 
